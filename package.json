@@ -1,0 +1,32 @@
+{
+  "name": "i-ching-com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexwuwei/i-ching-com.git"
+  },
+  "author": "Hugo A Guerra <guerrahugoa@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexwuwei/i-ching-com/issues"
+  },
+  "homepage": "https://github.com/alexwuwei/i-ching-com#readme",
+  "dependencies": {
+    "del": "^2.2.2",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "css-loader": "^0.26.1",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-webpack": "^1.5.0",
+    "style-loader": "^0.13.1",
+    "webpack-stream": "^3.2.0"
+  }
+}
