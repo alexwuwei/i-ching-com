@@ -1,6 +1,8 @@
+@import '_commons/_all.scss';
+
 .header-container-md {
   background-color: #6100FF;
-  color: white;
+  color: $true-white;
   font-family: 'Cinzel', serif;
   letter-spacing: 3px;
 }

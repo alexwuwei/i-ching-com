@@ -1,3 +1,5 @@
+@import '_commons/_all.scss';
+
 .content-container-ly {
   display: flex;
   flex-direction: row;
@@ -18,4 +20,10 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.header-banner-container-ly {
+  width: 728px;
+  height: 90px;
+  border: 1px solid tomato;
 }

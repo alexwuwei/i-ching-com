@@ -1,0 +1,245 @@
+//desktop-large, desktop-small + tablet font sizes
+
+$font-1-large: 80px; /* display text - bubble preview font size */
+$font-2-large: 42px; /* large headers, page level */
+$font-3-large: 24px; /* small headers, section level */
+$font-4-large: 16px; /* body copy */
+$font-5-large: 12px; /* subtext, footnotes */
+
+//mobile font sizes
+$font-1-small: 60px;
+$font-2-small: 30px;
+$font-3-small: 20px;
+$font-4-small: 14px;
+$font-5-small: 11px;
+
+//letter-spacing
+$letter-spacing-expand-large: 4px;
+$letter-spacing-expand-small: 3px;
+$letter-spacing-std: 0.4px;
+
+//line-height
+$line-height-std: 1.3;
+$line-height-body: 1.5;
+$line-height-header: 1;
+$line-height-label: 2;
+
+//families - to do: need to figure out how to make these the same family and have heavy pull in with a 900 call
+$lato-font: "Lato", sans-serif; // weights: light(300), regular (400), bold(600)
+$lato-heavy: "Lato 900 Black", sans-serif;
+
+//misc. styling
+
+@mixin body-underline {
+    border-bottom: 1px solid $swyfft-white;
+    padding-bottom: 3px;
+}
+
+//most common font-styles, use these as mixins.  If reusing a certain group of styles a lot please add to this list here but start with "font-".
+@mixin font-header-style {
+    font-size: $font-1-small;
+    font-family: $lato-heavy;
+    letter-spacing: $letter-spacing-std;
+    line-height: $line-height-header;
+
+    @media #{$tablet} {
+        font-size: $font-1-large;
+    }
+
+    @media #{$desktop-small} {
+        font-size: $font-1-large;
+    }
+
+    @media #{$desktop-large} {
+        font-size: $font-1-large;
+    }
+}
+
+@mixin font-button-style {
+    font-size: $font-4-small;
+    font-family: $lato-font;
+    font-weight: 400;
+    letter-spacing: $letter-spacing-expand-small;
+    line-height: $line-height-header;
+
+    @media #{$tablet} {
+        font-size: $font-4-large;
+        letter-spacing: $letter-spacing-expand-large;
+    }
+
+    @media #{$desktop-small} {
+        font-size: $font-4-large;
+        letter-spacing: $letter-spacing-expand-large;
+    }
+
+    @media #{$desktop-large} {
+        font-size: $font-4-large;
+        letter-spacing: $letter-spacing-expand-large;
+    }
+}
+
+// Used on About page, Contact Us, Privacy - includes nested <a> selector styling, modify element
+@mixin font-body-copy($font-color) {
+    font-weight: 400;
+    font-size: $font-4-small;
+    padding-top: 11px;
+    line-height: $line-height-body;
+    margin-bottom: 0;
+    letter-spacing: $letter-spacing-std;
+    color: $font-color;
+
+    @media #{$tablet} {
+        font-weight: 400;
+        font-size: $font-4-large;
+    }
+
+    @media #{$desktop-small} {
+        font-weight: 400;
+        font-size: $font-4-large;
+    }
+
+    @media #{$desktop-large} {
+        font-weight: 400;
+        font-size: $font-4-large;
+    }
+
+    a {
+        color: $swyfft-green-1;
+        transition: $transition-3;
+    }
+
+    a:hover {
+        color: $swyfft-green-2;
+    }
+}
+
+// Used on About page, Contact Us, Privacy
+@mixin hero-header-text {
+    color: $true-white;
+    font-size: $font-2-small;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: $line-height-std;
+    font-family: $lato-heavy !important;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: $letter-spacing-expand-small;
+    text-rendering: optimizeLegibility;
+
+
+    @media #{$tablet} {
+        font-size: $font-2-large;
+        letter-spacing: $letter-spacing-expand-large;
+    }
+
+    @media #{$desktop-small} {
+        font-size: $font-2-large;
+        letter-spacing: $letter-spacing-expand-large;
+    }
+
+    @media #{$desktop-large} {
+        font-size: $font-2-large;
+        letter-spacing: $letter-spacing-expand-large;
+    }
+}
+
+// Used on About page, Contact Us, Privacy, Modal headers, choose payment type page, purchase module, let us help you head
+@mixin h2-copy-pages ($font-color) {
+    color: $font-color;
+    font-weight: 900;
+    font-size: $font-3-small;
+    letter-spacing: $letter-spacing-expand-small;
+    font-family: $lato-heavy;
+    text-transform: uppercase;
+
+    @media #{$tablet} {
+        font-size: $font-3-large;
+        letter-spacing: $letter-spacing-expand-large;
+    }
+
+    @media #{$desktop-small} {
+        font-size: $font-3-large;
+        letter-spacing: $letter-spacing-expand-large;
+    }
+
+    @media #{$desktop-large} {
+        font-size: $font-3-large;
+        letter-spacing: $letter-spacing-expand-large;
+    }
+}
+
+// Used on modify group headers,
+@mixin h2-alternate-style ($font-color) {
+    color: $font-color;
+    font-weight: 900;
+    font-size: $font-3-small;
+    letter-spacing: $letter-spacing-std;
+    font-family: $lato-heavy;
+    text-transform: none;
+
+    @media #{$tablet} {
+        font-size: $font-3-large;
+    }
+
+    @media #{$desktop-small} {
+        font-size: $font-3-large;
+    }
+
+    @media #{$desktop-large} {
+        font-size: $font-3-large;
+    }
+}
+
+// Used on About page, Contact Us, Privacy
+@mixin h3-copy-pages ($font-color) {
+    color: $font-color;
+    font-weight: 900;
+    font-size: $font-4-small;
+    letter-spacing: $letter-spacing-expand-small;
+    font-family: $lato-heavy;
+    text-transform: uppercase;
+
+    @media #{$tablet} {
+        font-size: $font-4-large;
+        letter-spacing: $letter-spacing-expand-large;
+    }
+
+    @media #{$desktop-small} {
+        font-size: $font-4-large;
+        letter-spacing: $letter-spacing-expand-large;
+    }
+
+    @media #{$desktop-large} {
+        font-size: $font-4-large;
+        letter-spacing: $letter-spacing-expand-large;
+    }
+}
+
+// Used for element headers on modify page,
+@mixin h3-lighter-style ($font-color) {
+    color: $font-color;
+    font-family: $lato-font;
+    font-weight: 400;
+    font-size: $font-4-small;
+    letter-spacing: $letter-spacing-expand-small;
+    text-transform: uppercase;
+    line-height: $line-height-std;
+
+    @media #{$tablet} {
+        font-size: $font-4-large;
+        letter-spacing: $letter-spacing-expand-large;
+        line-height: $line-height-header;
+    }
+
+    @media #{$desktop-small} {
+        font-size: $font-4-large;
+        letter-spacing: $letter-spacing-expand-large;
+        line-height: $line-height-header;
+    }
+
+    @media #{$desktop-large} {
+        font-size: $font-4-large;
+        letter-spacing: $letter-spacing-expand-large;
+        line-height: $line-height-header;
+    }
+}

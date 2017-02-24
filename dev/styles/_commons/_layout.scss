@@ -1,0 +1,19 @@
+// possibly move these umbrella classes to a separate file once we move off current site.  Right now changing SwyfftBootstrap file edits live site.
+.container {
+    max-width: none;
+
+    @media #{$tablet} {
+        max-width: 768px;
+    }
+
+    @media #{$desktop-small} {
+        max-width: 980px;
+    }
+
+    @media #{$desktop-large} {
+        max-width: 1200px;
+    }
+}
+
+//padding, gutters, etc.
+$input-padding: 4%;

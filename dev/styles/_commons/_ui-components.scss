@@ -1,0 +1,136 @@
+//buttons, input fields, etc. We will continue adding as needed
+
+//button mixin, accepts a background color and text color.
+@mixin button($background-color, $text-color) {
+    background-color: $background-color;
+    border-radius: 30px;
+    border: none !important;
+    color: $text-color;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: $letter-spacing-expand-small;
+    font-size: 13px;
+    transition: $transition-1; //defined in "_animations.scss"
+    cursor: pointer;
+}
+
+//input field styling for the search box on home page and copy page template footer: about, privacy, contact
+@mixin input-search {
+    font-family: $lato-font;
+    font-weight: 300 !important;
+    letter-spacing: $letter-spacing-std;
+    background-color: $swyfft-white;
+    color: $swyfft-gray-3 !important;
+    border-radius: 55px;
+    font-size: $font-4-small !important; //mobile size
+    font-style: italic;
+    height: 56px;
+
+    @media #{$tablet} {
+        font-size: $font-4-large !important;
+    }
+
+    @media #{$desktop-small} {
+        font-size: $font-4-large !important;
+    }
+
+    @media #{$desktop-large} {
+        font-size: $font-4-large !important;
+    }
+}
+
+@mixin input-focus($color) {
+    box-shadow: 0 0 4px 2px $color;
+    color: $true-black;
+    font-weight: 400 !important;
+}
+
+//used for contact us input fields - cb: this should probably be the same as the above mixin, investigate later
+@mixin input-state-green-focus {
+    box-shadow: inset 0px 0px 6px $swyfft-green-1;
+    -webkit-box-shadow: inset 0px 0px 6px $swyfft-green-1;
+    -o-box-shadow: inset 0px 0px 6px $swyfft-green-1;
+    -ms-box-shadow: inset 0px 0px 6px $swyfft-green-1;
+    -moz-box-shadow: inset 0px 0px 6px $swyfft-green-1;
+}
+
+@mixin input-state-red {
+    box-shadow: inset 0px 0px 6px $error-red;
+    -webkit-box-shadow: inset 0px 0px 6px $error-red;
+    -o-box-shadow: inset 0px 0px 6px $error-red;
+    -ms-box-shadow: inset 0px 0px 6px $error-red;
+    -moz-box-shadow: inset 0px 0px 6px $error-red;
+}
+
+//used on home page
+@mixin button-small($background-color, $text-color) {
+    background-color: $background-color;
+    color: $text-color;
+    border: none;
+    border-radius: 30px;
+    height: 56px;
+    width: auto;
+    padding: 11px 30px;
+    font-size: $font-4-small;
+    font-weight: 300;
+    font-family: $lato-font;
+    letter-spacing: $letter-spacing-expand-small;
+    text-transform: uppercase;
+    transition: $transition-3; //defined in "_animations.scss"
+    @media #{$tablet} {
+        font-size: $font-4-large;
+        letter-spacing: $letter-spacing-expand-large;
+    }
+
+    @media #{$desktop-small} {
+        font-size: $font-4-large;
+        letter-spacing: $letter-spacing-expand-large;
+    }
+
+    @media #{$desktop-large} {
+        font-size: $font-4-large;
+        letter-spacing: $letter-spacing-expand-large;
+    }
+}
+
+//used for contact us submit button
+@mixin button-state-hover-green {
+    border: 3px solid $swyfft-green-1 !important;
+    background-color: $true-white;
+    color: $swyfft-green-1 !important;
+}
+
+//bullet style for use on a li:before element. Used on about page, [insert more here]
+@mixin bulleted-list-style {
+    content: "\2022"; //"." unicode
+    color: $swyfft-green-1;
+    display: inline-block;
+    width: 40px;
+    margin-left: -45px;
+}
+
+//used on contact us (should be used on purchase and all other forms)
+@mixin label-header{
+    color: $true-black;
+    font-size: $font-5-small;
+    letter-spacing: $letter-spacing-expand-small;
+    line-height: $line-height-label;
+    font-weight: 400;
+    font-family: $lato-font;
+    text-transform: uppercase;
+
+    @media #{$tablet} {
+        font-size: $font-5-large;
+        letter-spacing: $letter-spacing-expand-large;
+    }
+
+    @media #{$desktop-small} {
+        font-size: $font-5-large;
+        letter-spacing: $letter-spacing-expand-large;
+    }
+
+    @media #{$desktop-large} {
+        font-size: $font-5-large;
+        letter-spacing: $letter-spacing-expand-large;
+    }
+}
