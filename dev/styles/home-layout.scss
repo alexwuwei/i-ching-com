@@ -1,0 +1,21 @@
+.content-container-ly {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 100%;
+}
+
+.blurb-container-ly, .cast-container-ly {
+  width: 40%;
+}
+
+.media-container-ly {
+  width: 20%;
+  border: 1px solid blue;
+}
+
+.header-container-ly {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
