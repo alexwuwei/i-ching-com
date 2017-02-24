@@ -5,7 +5,7 @@ let rename = require('gulp-rename');
 let del = require('del');
 let sass = require('gulp-sass');
 
-let jsPaths   = ['*.js', 'dev/js/*.js'];
+let jsPaths   = ['*.js', 'dev/js/*.js', 'dev/js/*/*.js'];
 let htmlPaths = ['dev/**/*.html', 'dev/*.html'];
 let scssPaths = ['dev/styles/*.scss'];
 let cssPaths = ['dev/styles/*.css'];
