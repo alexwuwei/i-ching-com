@@ -1,8 +1,38 @@
 @import '_commons/_all.scss';
 
 .header-container-md {
-  background-color: #6100FF;
+  background-color: $purple;
   color: $true-white;
-  font-family: 'Cinzel', serif;
-  letter-spacing: 3px;
+  font-family: $cinzel-font;
+  letter-spacing: $letter-spacing-expand-small;
+  font-size: $font-3-large;
+}
+
+.button-md {
+  @include button($gold, #923D99);
+  width: 150px;
+  height: 35px;
+  margin-top: 5px;
+}
+
+.large-res-blurb-lines-md {
+  display: none;
+
+  @media #{$tablet} {
+    display: flex;
+  }
+
+  @media #{$desktop-small} {
+    display: flex;
+  }
+
+  @media #{$desktop-large} {
+    display: flex;
+  }
+
+}
+
+.main-blurb-line-md {
+  letter-spacing: $letter-spacing-std;
+  font-size: $font-3-small;
 }

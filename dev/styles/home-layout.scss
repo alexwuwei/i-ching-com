@@ -1,29 +1,88 @@
 @import '_commons/_all.scss';
 
+.container-ly {
+  @include flex-display;
+  flex-direction: column;
+  align-items: center;
+}
+
 .content-container-ly {
-  display: flex;
-  flex-direction: row;
+  @include flex-display;
+  flex-direction: column;
   justify-content: space-between;
   min-height: 100%;
+  text-align: center;
+
+  @media #{$tablet} {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  @media #{$desktop-small} {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  @media #{$desktop-large} {
+    flex-direction: row;
+    text-align: left;
+  }
+
 }
 
 .blurb-container-ly, .cast-container-ly {
-  width: 40%;
+  width: 100%;
+
+  @media #{$tablet} {
+    width: 40%;
+  }
+
+  @media #{$desktop-small} {
+    width: 40%;
+  }
+
+  @media #{$desktop-large} {
+    width: 40%;
+  }
+
 }
 
 .media-container-ly {
-  width: 20%;
+  // width: 20%;
   border: 1px solid blue;
 }
 
 .header-container-ly {
-  display: flex;
+  @include flex-display;
   flex-direction: row;
   justify-content: center;
+  width: 100%;
+  text-align: center;
 }
 
 .header-banner-container-ly {
   width: 728px;
   height: 90px;
   border: 1px solid tomato;
+  display: none;
+
+  @media #{$tablet} {
+    display: flex;
+  }
+
+  @media #{$desktop-small} {
+    display: flex;
+  }
+
+  @media #{$desktop-large} {
+    display: flex;
+  }
+
+}
+
+.cast-container-ly {
+  @include flex-display;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
 }
